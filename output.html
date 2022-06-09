@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+
+-->
+<html>
+	<head>
+		<title>The Office</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+img {
+    border-radius: 20px;
+  display: block;
+    margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+        </style>
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="animation.css" />
+</head>
+<body>
+    <!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">The Office</a> - Skill Finder</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+                            <li><a href="skillfinder.html">Skill Finder</a></li>
+                            <li><a href="about.html">About Us</a></li>
+				            <li><a href="blog.html">Blog</a></li>
+				
+						</ul>
+					</nav>
+				</header>
+      <div class="loader-wrapper">
+     
+           
+      <span class="loader"><span class="loader-inner"></span></span>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>    <div>Expected Time <span id="timer"></span></div>
+    </div>
+  
+   
+
+
+<br>
+    <br>
+    
+<br>
+    <br>
+    
+<br>
+    
+ <div class = container id="output" >   
+<h2  align="center">Here are you Results . . . .</h2>
+<hr/>
+ <img src="images/outputimg.png"  style="width:80%">
+    </div>
+<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy;All rights reserved.</li><li>The Office</li>
+					</ul>
+                    
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    <script>
+    document.getElementById("output").style.visibility = "hidden";
+  document.getElementById("footer").style.visibility = "hidden";
+   
+    window.setTimeout(fout , 3000) 
+    
+function fout(){
+   $(".loader-wrapper").fadeOut("slow");
+        document.getElementById("output").style.visibility = "visible";
+        document.getElementById("footer").style.visibility = "";
+
+
+}
+    
+    </script>
+    <script>document.getElementById('timer').innerHTML =
+  4 + ":" + 59;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+    
+    </script>
+    </body>
+</html>

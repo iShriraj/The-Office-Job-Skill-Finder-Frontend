@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!--
+
+-->
+<html>
+	<head>
+		<title>Skill Finder</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+         <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+         <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="animation.css" />
+
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">The Office</a> - Skill Finder</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+                            <li><a href="skillfinder.html">Skill Finder</a></li>
+                            <li><a href="about.html">About Us</a></li>
+				            <li><a href="blog.html">Blog</a></li>
+				
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2 style = "font-family: sofia">Skill Finder</h2>
+						<p style = "font-family: sofia">A amazing tool to know your job and its requirements.</p>
+					</header>
+					<div class="box">
+						<span class="image featured"><img src="images/Dem.jpg" alt=""></span>
+						<h3 align = "center" style="font-weight: 700">Welcome to Skill Finder</h3>
+						<p style = "font-weight: 300">Your education and experience may make you eligible to apply for a job but, to be successful in most roles, you will need skills that you are likely to develop over time. Some will be specific to the job. Graduate employers place a lot of emphasis on finding candidates with the right skills and competencies for their organisations. Depending on the career sector and profession you choose to work in, there could be very specific skills, abilities and knowledge needed to do the job.
+                        
+                        <p align = "center" weight = "400" >Skill finder will find skills which are most important for a specific job position. It will search through internet , The skills you should posses or the skills you should learn for a job of your choice.</p>
+                        <br>
+                        <hr/>
+                        <h3 align = "center" weight = "500" style="font-weight: 400">All you have to do is Enter " What Kind of Job " you want and " Where Do You Want " it to be !!!</h3>
+                        
+                        <hr/>
+						
+                        <section id="main" class="container">
+                        <div class="row">
+							<!-- Form -->
+								<section class="box">
+									
+									<form method="post" action="#">
+										<div class="row gtr-uniform gtr-50">
+											<div class="col-6 col-12-mobilep">
+												<input type="text" name="name" id="name" value="" placeholder="Job Title " />
+											</div>
+											<div class="col-6 col-12-mobilep">
+												<input type="text" name="name" id="name" value="" placeholder="Job Location  " />
+											</div>
+											<div class="col-12">
+												<select name="category" id="category">
+													<option value="">- Category -</option>
+													<option value="1">Computer Sciece </option>
+													<option value="1">Information Technology</option>
+													<option value="1">Electronics and Tele-Communication</option>
+													<option value="1">Instrumentation</option>
+												</select>
+											</div>
+											
+											<div class="col-6 col-12-narrower">
+												<input type="checkbox" id="human" name="human">
+												<label for="human">I am a human and not a robot</label>
+											</div>
+											<div class="col-12" >
+												<ul class="actions">
+                                                    
+													<li><input type="submit" value="Search" id="scrape">
+			</li>
+												</ul>
+											</div>
+										</div>
+									</form>
+
+									
+
+									
+								</section>
+
+						</div>
+                        </section>
+					</div>
+                        
+            </section>
+						</div>
+        <div class="loader-wrapper">
+     
+           
+      <span class="loader"><span class="loader-inner"></span></span>
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>    <div>Expected Time <span id="timer"></span></div>
+    </div>
+         	
+				
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy;All rights reserved.</li><li>The Office</li>
+					</ul>
+                    
+				</footer>
+		
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+          
+        <script>
+            document.getElementById("output").style.visibility = "hidden";
+            document.getElementById("footer").style.visibility = "hidden";
+   
+            window.setTimeout(fout , 3000) 
+    
+            function fout(){
+                $(".loader-wrapper").fadeOut("slow");
+                document.getElementById("output").style.visibility = "visible";
+                document.getElementById("footer").style.visibility = "";
+}
+    
+    </script>
+        
+    <script>document.getElementById('timer').innerHTML =
+  4 + ":" + 59;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+    
+    </script>
+
+	</body>
+</html>
